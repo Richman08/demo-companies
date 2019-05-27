@@ -1,9 +1,12 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>info-company</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content>
+<ion-item class="container-info">
+  <ion-card>
+    <mat-list-item><strong>NAME: </strong> {{company.name}}</mat-list-item>
+    <mat-list-item><strong>ADDRESS: </strong> {{company.address}}</mat-list-item>
+    <mat-list-item><strong>CITY: </strong> {{company.city}}</mat-list-item>
+    <mat-list-item><img [src]="company.img"></mat-list-item>
+    <p mat-line class="location">
+      <img src="./assets/img/location.svg">
+      <a mat-line href="https://maps.google.com/?q={{company.latitude}},{{company.longitude}}"> Location</a>
+    </p>
+  </ion-card>
+  </ion-item>
