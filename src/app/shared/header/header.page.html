@@ -1,0 +1,10 @@
+<div id="navbar" [style.top]="positionToolbar" >
+  <div>
+    <a>Nav</a>
+    <a *ngIf="isBack" [routerLink]="[backPage]"> BACK TO {{backPage}}</a>
+    <a [routerLink]="['/add-company']" *ngIf="isMain">Add Company</a>
+    <a  *ngIf="auth" (click)="deleteCurrentSession()">Delete current session</a>
+    <a (click)="logOut()" *ngIf="auth">Exit</a>
+  </div>
+
+</div>

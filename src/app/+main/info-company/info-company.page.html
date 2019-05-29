@@ -1,0 +1,21 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>info-company</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item class="container-info">
+    <div>
+      <ion-list><strong>NAME: </strong> {{company.name}}</ion-list>
+      <ion-list><strong>ADDRESS: </strong> {{company.address}}</ion-list>
+      <ion-list><strong>CITY: </strong> {{company.city}}</ion-list>
+      <ion-list><img [src]="company.img"></ion-list>
+      <div class="location">
+        <img src="./assets/img/location.svg">
+        <a href="https://maps.google.com/?q={{company.latitude}},{{company.longitude}}"> Location</a>
+      </div>
+    </div>
+  </ion-item>
+</ion-content>

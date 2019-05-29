@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>main-page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item class="container">
+    <ion-item class="form-container">
+      <ion-card class="example-card">
+        <ion-card-header>
+          <ion-card-title>Login</ion-card-title>
+        </ion-card-header>
+        <div>
+          <form class="example-form" [formGroup]="loginForm">
+            <table class="example-full-width" cellspacing="0">
+              <tr>
+                <td>
+                  <ion-list class="example-full-width">
+                    <ion-input formControlName="username" placeholder="Username" name="username" required></ion-input>
+                  </ion-list>
+                </td>
+              </tr>
+              <tr>
+                <td><ion-list class="example-full-width">
+                  <ion-input placeholder="Password" type="password" formControlName="password" name="password" required></ion-input>
+                </ion-list></td>
+              </tr></table>
+          </form>
+          <!--<mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>-->
+        </div>
+        <!-- <mat-card-actions> -->
+          <ion-button (click)="login()" color="primary">Login</ion-button>
+        <!-- </mat-card-actions>   -->
+      </ion-card>
+    </ion-item>
+  </ion-item>
+
+</ion-content>
