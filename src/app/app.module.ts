@@ -17,15 +17,15 @@ import { InfoCompanyPage } from './+main/info-company/info-company.page';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
 import { from } from 'rxjs';
+import { MainPagePageModule } from './+main/main-page/main-page.module';
+import { InfoCompanyPageModule } from './+main/info-company/info-company.module';
+import { LoginPageModule } from './login/login.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddCompanyPage,
     CompanyPagePage,
-    InfoCompanyPage,
-    MainPagePage,
-    LoginPage
   ],
   entryComponents: [
     AppComponent,
@@ -41,13 +41,20 @@ import { from } from 'rxjs';
     ReactiveFormsModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MainPagePageModule,
+    InfoCompanyPageModule,
+    LoginPageModule
   ],
   providers: [
     CookieService,
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+  ],
+  exports:[
+    FormsModule,
+    ReactiveFormsModule,
   ],
   bootstrap: [AppComponent]
 })

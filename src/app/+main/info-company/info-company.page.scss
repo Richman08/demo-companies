@@ -1,0 +1,19 @@
+.container-info{
+    margin-top: 50px;
+    img {
+      height: 30px;
+      width: 30px;
+    }
+    a{
+      text-decoration: none;
+      color: #000;
+    }
+    .location{
+      display: flex;
+      align-items: center;
+    }
+    strong {
+      font-weight: bold;
+    }
+  }
+  

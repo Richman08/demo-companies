@@ -1,39 +1,49 @@
-<ion-item class="container">
-  <ion-item class="form-container">
-    <ion-card class="example-card">
-      <ion-card-header>
-        <ion-card-title>Add Company</ion-card-title>
-      </ion-card-header>
-      <ion-content>
-        <form class="example-form" [formGroup]="addCompanyForm">
-          <table class="example-full-width" cellspacing="0">
-            <tr>
-              <td>
-                <ion-list class="example-full-width">
-                  <ion-input placeholder="Name" formControlName="name" name="name" required>
-                  </ion-list>
-              </td>
-            </tr>
-            <tr>
-              <td><ion-list class="example-full-width">
-                <ion-input placeholder="City" formControlName="city" name="city" required>
-                </ion-list></td>
-            </tr>
-            <tr>
-              <td>
-                <ion-list class="example-full-width">
-                  <ion-input placeholder="Address" formControlName="address" name="address" required>
-                </ion-list>
-              </td>
-            </tr>
-          </table>
-        </form>
-        <!--<mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>-->
-      </ion-content>
-      <!-- <mat-card-actions> -->
-        <button mat-raised-button (click)="addCompany()" color="primary">Add</button>
-      <!-- </mat-card-actions> -->
-    </ion-card>
+<ion-header>
+    <ion-toolbar>
+      <ion-title>add-company</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+  
+    <ion-item class="container">
+      <ion-item class="form-container">
+        <ion-card class="example-card">
+          <ion-card-header>
+            <ion-card-title>Add Company</ion-card-title>
+          </ion-card-header>
+          <ion-content>
+            <form class="example-form" [formGroup]="addCompanyForm">
+              <table class="example-full-width" cellspacing="0">
+                <tr>
+                  <td>
+                    <ion-list class="example-full-width">
+                      <ion-input placeholder="Name" formControlName="name" name="name" required></ion-input>
+                      </ion-list>
+                  </td>
+                </tr>
+                <tr>
+                  <td><ion-list class="example-full-width">
+                    <ion-input placeholder="City" formControlName="city" name="city" required></ion-input>
+                    </ion-list></td>
+                </tr>
+                <tr>
+                  <td>
+                    <ion-list class="example-full-width">
+                      <ion-input placeholder="Address" formControlName="address" name="address" required></ion-input>
+                    </ion-list>
+                  </td>
+                </tr>
+              </table>
+            </form>
+            <!--<mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>-->
+          </ion-content>
+          <!-- <mat-card-actions> -->
+            <button ion-button (click)="addCompany()" color="primary">Add</button>
+          <!-- </mat-card-actions> -->
+        </ion-card>
+    
+      </ion-item>
+    </ion-item>
+  </ion-content>
 
-  </ion-item>
-</ion-item>

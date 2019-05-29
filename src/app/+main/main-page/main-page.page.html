@@ -1,9 +1,28 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>main-page</ion-title>
   </ion-toolbar>
-</ion-header>
-
+</ion-header> -->
 <ion-content>
-
+  <ion-infinite-scroll 
+  class="search-results"
+  threshold="100px"
+  (ionInfinite)="onScrollDown()">
+  <ion-item *ngFor="let company of companies" class="mat-item" >
+    <ion-card [routerLink]="['/info-company/' + company.id]">
+      <p >{{company.name}}</p>
+      <p > {{company.address}} </p>
+      <p > {{company.city}} </p>
+      <p ><img [src]="company.img"></p>
+      <p  class="location">
+        <img src="./assets/img/location.svg">
+        <a  href="https://maps.google.com/?q={{company.latitude}},{{company.longitude}}"> Location</a>
+      </p>
+    </ion-card>
+    <p  class="delete" (click)="deleteCompany(company.id)">DELETE</p>
+  </ion-item>
+</ion-infinite-scroll>
 </ion-content>
+<!-- <app-header></app-header> -->
+
+

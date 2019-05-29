@@ -1,0 +1,25 @@
+.search-results{
+    margin-top: 10px;
+    a{
+      text-decoration: none;
+      color: #000;
+    }
+    .location {
+      display: flex;
+      margin-top: 10px;
+  
+      img {
+        height: 15px;
+        width: 15px;
+      }
+    }
+    ion-card {
+      padding: 20px;
+    }
+    ion-card:hover {
+     cursor: pointer;
+   }
+    .delete:hover{
+      cursor: pointer;
+    }
+  }
